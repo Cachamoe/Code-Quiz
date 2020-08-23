@@ -1,0 +1,28 @@
+
+#h1 {
+    text-align: center;
+}
+
+#p {
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#startbutton {
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -ms-transform: translate(-30%, -30%);
+    transform: translate(-50%, -50%);
+}
+
+#highscores {
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+#Timer {
+    margin-top: 1%;
+}
