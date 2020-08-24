@@ -1,7 +1,7 @@
 // Variables
 var viewhighscores = document.querySelector("#viewhighscores");
 var highscorelist = document.querySelector("#highscorelist");
-var timer = document.querySelector("#Timer");
+var timer = document.querySelector("#timer");
 var startbutton = document.querySelector("#startbutton");
 var questions = ["a", "b", "c", "d", "e"];
 var answers = ["a", "b", "c", "d", "e"];
