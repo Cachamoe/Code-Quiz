@@ -3,42 +3,47 @@ var viewhighscores = document.querySelector("#viewhighscores");
 var highscorelist = document.querySelector("#highscorelist");
 var timer = document.querySelector("#timer");
 var startbutton = document.querySelector("#startbutton");
+var score = [];
+var secondsleft = 60;
+
+Convert to objects 
 var questions = ["a", "b", "c", "d", "e"];
 var answers = ["a", "b", "c", "d", "e"];
-var score = [];
-
 
 // Timer and questions activated once start button clicked
  function beginquiz() {
-    if (startbutton);
-    countdown() && questions[0];
+    countdown();
 }
  function countdown() {
     var timer = setInterval(function() {
         secondsleft--;
-    }, 1,000); 
+        console.log(secondsleft)
+    }, 1000); 
 }
  
 
 // Once answered, new question appears
-  function newquestion() {
-    if (answers[0] === true);
-         questions[1] && score ++;
-    if (answers[1] === true);
-         questions[2] && score ++;
-    if (answers[2] === true);
-         questions[3] && score ++;
-    if (answers[3] === true);
-         questions[4] && score ++;
-    if (answers[4] === true);
-         score ++;
-}
+//   function newquestion() {
+//     if (answers[0] === true);
+//          questions[1] && score ++;
+//     if (answers[1] === true);
+//          questions[2] && score ++;
+//     if (answers[2] === true);
+//          questions[3] && score ++;
+//     if (answers[3] === true);
+//          questions[4] && score ++;
+//     if (answers[4] === true);
+//          score ++;
+// }
 
 
 // If answered inccorrectly, then sub 10 secs
-   function inccorrect() {
-    if (answers !== true);
-         secondsleft - 10;
+   function checkAnswer() {
+     if (userChoice === correctChoice) {
+          console.log("correct");
+     } else {
+          console.log("wrong");
+     }
 }
 
 
