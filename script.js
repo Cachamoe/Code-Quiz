@@ -1,70 +1,70 @@
 // Variables
-var viewhighscores = document.querySelector("#viewhighscores");
-var highscorelist = document.querySelector("#highscorelist");
-var timer = document.querySelector("#timer");
-var startbutton = document.querySelector("#startbutton");
-var score = [];
-var secondsleft = 60;
+let viewHighscores = document.querySelector("#viewHighscores");
+let highscoreList = document.querySelector("#highscoreList");
+let timer = document.querySelector("#timer");
+let startButton = document.querySelector("#startButton");
+let saveButton = document.querySelector("#saveButton");
+let userInitials = document.querySelector("#userInitials");
+let secondsleft = 60;
+let score = 0;
 
-Convert to objects 
-var questions = ["a", "b", "c", "d", "e"];
-var answers = ["a", "b", "c", "d", "e"];
 
 // Timer and questions activated once start button clicked
- function beginquiz() {
-    countdown();
-}
- function countdown() {
-    var timer = setInterval(function() {
+    function beginquiz() {
+        countdown();
+        renderQuestion();
+        document.getElementById("quiz").style.display = "block";
+    }
+
+    function countdown() {
+     let timer = setInterval(function() {
         secondsleft--;
-        console.log(secondsleft)
-    }, 1000); 
-}
- 
-
-// Once answered, new question appears
-//   function newquestion() {
-//     if (answers[0] === true);
-//          questions[1] && score ++;
-//     if (answers[1] === true);
-//          questions[2] && score ++;
-//     if (answers[2] === true);
-//          questions[3] && score ++;
-//     if (answers[3] === true);
-//          questions[4] && score ++;
-//     if (answers[4] === true);
-//          score ++;
-// }
-
+        console.log(secondsleft);
+     }, 1000); 
+     document.getElementById("timer").innerHTML = "Timer: " + secondsleft;
+    }
+   
 
 // If answered inccorrectly, then sub 10 secs
-   function checkAnswer() {
-     if (userChoice === correctChoice) {
-          console.log("correct");
+
+   function checkAnswer(answer) {
+     if (questions[runningQuestionIndex].correct == answer) {
+         score++;
+         console.log("correct");
      } else {
-          console.log("wrong");
+         secondsleft - 10;
+         console.log("wrong");
      }
-}
+    }
 
-
+    
 // When all questions answered or timer === 0, then stop game
    function endgame() {   
-    if (secondsleft === 0 || questions === 0) {
+    if (secondsleft === 0 || questions.length === 0) {
           clearInterval(timer);
           sendmessage("Times Up!");
         }
-}
+    }
 
 
-startbutton.addEventListener("click", beginquiz);
-viewhighscores.addEventListener("click", highscorelist);
+startButton.addEventListener("click", beginquiz);
+viewHighscores.addEventListener("click", highscoreList);
+saveButton.addEventListener("click", Save);
 
 
 // When stop game, then save initials and score for highscores
-    function Save() {
-        if (endgame());
+    function renderScore({
+       
+
+
+    })
+    function Save() { 
         JSON.stringify(
-            localStorage.setItem("Score", score),
-            highscorelist.setItem("Highscores", highscorelist)
+            localStorage.setItem("Score", renderScore),
+            localStorage.setItem("Initials", userInitials),
+            console.log(score),
+            console.log(userInitials),
         )
     }
+
+    
