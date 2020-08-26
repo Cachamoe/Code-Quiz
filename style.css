@@ -14,12 +14,7 @@
 /* Misc Styles */
 
 #startButton {
-    margin: 0;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    -ms-transform: translate(-30%, -30%);
-    transform: translate(-50%, -50%);
+    margin-left: 45%;
 }
 #viewHighscores {
     margin-top: 5%; 
@@ -31,44 +26,44 @@
 /* Answer Styles */
 
 #possibleAnswers {
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 20%;
+    margin-bottom: 20%;
     text-align: center;
-    margin-left: 46%;
+    margin-left: 43%;
     
 }
 #1 {
     margin-top: 10%;
     margin-bottom: 10%;
     text-align: center;
-    margin-left: 46%;
+    margin-left: 40%;
     
 }
 #2 {
     margin-top: 10%;
     margin-bottom: 10%;
     text-align: center;
-    margin-left: 46%;
+    margin-left: 40%;
     
 }
 #3 {
     margin-top: 10%;
     margin-bottom: 10%;
     text-align: center;
-    margin-left: 46%;
+    margin-left: 40%;
     
 }
 #4 {
     margin-top: 10%;
     margin-bottom: 10%;
     text-align: center;
-    margin-left: 46%;
+    margin-left: 40%;
     
 }
 #5 {
     margin-top: 10%;
     margin-bottom: 10%;
     text-align: center;
-    margin-left: 46%;
+    margin-left: 40%;
     
 }

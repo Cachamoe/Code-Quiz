@@ -14,10 +14,14 @@ let score = 0;
         countdown();
         renderQuestion();
         document.getElementById("quiz").style.display = "block";
+        document.getElementById("startButton").style.display = "none";
+        document.getElementById("h1").style.display = "none";
+        document.getElementById("p").style.display = "none";
+        document.getElementById("viewHighscores").style.display = "none";
     }
 
     function countdown() {
-     let timer = setInterval(function() {
+       setInterval(function() {
         secondsleft--;
         console.log(secondsleft);
      }, 1000); 
@@ -42,29 +46,24 @@ let score = 0;
    function endgame() {   
     if (secondsleft === 0 || questions.length === 0) {
           clearInterval(timer);
-          sendmessage("Times Up!");
+          document.getElementById("timer").innerHTML = "Times up!";
+          document.getElementById(viewHighscores).style.display = "block";
         }
     }
 
 
 startButton.addEventListener("click", beginquiz);
 viewHighscores.addEventListener("click", highscoreList);
-saveButton.addEventListener("click", Save);
+
 
 
 // When stop game, then save initials and score for highscores
-    function renderScore({
-       
-
-
-    })
-    function Save() { 
-        JSON.stringify(
-            localStorage.setItem("Score", renderScore),
-            localStorage.setItem("Initials", userInitials),
-            console.log(score),
-            console.log(userInitials),
-        )
-    }
-
+saveButton.addEventListener("click", function(event) { 
+        event.preventDefault();
+            localStorage.setItem("Score", JSON.stringify(checkAnswer)),
+            localStorage.setItem("Initials", JSON.stringify(userInitials))       
+})
+    
+    
+    
     

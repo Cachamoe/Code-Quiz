@@ -12,7 +12,7 @@ let questions = [
     choiceC : "To be determined",
     choiceD : "To be determined",
     choiceE : "To be determined",
-    correct : "EX: A",
+    correct : "B",
     },
     {question : "To be determined?",
     choiceA : "To be determined",
@@ -20,7 +20,7 @@ let questions = [
     choiceC : "To be determined",
     choiceD : "To be determined",
     choiceE : "To be determined",
-    correct : "EX: A",
+    correct : "A",
     },
     {question : "To be determined?",
     choiceA : "To be determined",
@@ -28,7 +28,7 @@ let questions = [
     choiceC : "To be determined",
     choiceD : "To be determined",
     choiceE : "To be determined",
-    correct : "EX: A",
+    correct : "E",
     },
     {question : "To be determined?",
     choiceA : "To be determined",
@@ -36,7 +36,7 @@ let questions = [
     choiceC : "To be determined",
     choiceD : "To be determined",
     choiceE : "To be determined",
-    correct : "EX: A",
+    correct : "C",
     },
     {question : "To be determined?",
     choiceA : "To be determined",
@@ -44,7 +44,7 @@ let questions = [
     choiceC : "To be determined",
     choiceD : "To be determined",
     choiceE : "To be determined",
-    correct : "EX: A",
+    correct : "D",
     },
 ];
 
@@ -55,7 +55,7 @@ let runningQuestionIndex = 0;
 
 function renderQuestion() {
     let q = questions[runningQuestionIndex];
-    question.innerHTML = "<p>" + q.question + "</p>";
+    questions.innerHTML = "<p>" + q.question + "</p>";
     choiceA.innerHTML = q.choiceA;
     choiceB.innerHTML = q.choiceB;
     choiceC.innerHTML = q.choiceC;
