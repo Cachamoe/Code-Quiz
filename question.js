@@ -4,47 +4,53 @@ const choiceB = document.getElementById("2");
 const choiceC = document.getElementById("3");
 const choiceD = document.getElementById("4");
 const choiceE = document.getElementById("5");
+const question = document.getElementById("question");
 
 let questions = [
-    {question : "To be determined?",
-    choiceA : "To be determined",
-    choiceB : "To be determined",
-    choiceC : "To be determined",
-    choiceD : "To be determined",
-    choiceE : "To be determined",
-    correct : "B",
+    {
+        question: "To be determined?",
+        choiceA: "To be determined",
+        choiceB: "To be determined",
+        choiceC: "To be determined",
+        choiceD: "To be determined",
+        choiceE: "To be determined",
+        correct: "B",
     },
-    {question : "To be determined?",
-    choiceA : "To be determined",
-    choiceB : "To be determined",
-    choiceC : "To be determined",
-    choiceD : "To be determined",
-    choiceE : "To be determined",
-    correct : "A",
+    {
+        question: "To be determined?",
+        choiceA: "To be determined",
+        choiceB: "To be determined",
+        choiceC: "To be determined",
+        choiceD: "To be determined",
+        choiceE: "To be determined",
+        correct: "A",
     },
-    {question : "To be determined?",
-    choiceA : "To be determined",
-    choiceB : "To be determined",
-    choiceC : "To be determined",
-    choiceD : "To be determined",
-    choiceE : "To be determined",
-    correct : "E",
+    {
+        question: "To be determined?",
+        choiceA: "To be determined",
+        choiceB: "To be determined",
+        choiceC: "To be determined",
+        choiceD: "To be determined",
+        choiceE: "To be determined",
+        correct: "E",
     },
-    {question : "To be determined?",
-    choiceA : "To be determined",
-    choiceB : "To be determined",
-    choiceC : "To be determined",
-    choiceD : "To be determined",
-    choiceE : "To be determined",
-    correct : "C",
+    {
+        question: "To be determined?",
+        choiceA: "To be determined",
+        choiceB: "To be determined",
+        choiceC: "To be determined",
+        choiceD: "To be determined",
+        choiceE: "To be determined",
+        correct: "C",
     },
-    {question : "To be determined?",
-    choiceA : "To be determined",
-    choiceB : "To be determined",
-    choiceC : "To be determined",
-    choiceD : "To be determined",
-    choiceE : "To be determined",
-    correct : "D",
+    {
+        question: "To be determined?",
+        choiceA: "To be determined",
+        choiceB: "To be determined",
+        choiceC: "To be determined",
+        choiceD: "To be determined",
+        choiceE: "To be determined",
+        correct: "D",
     },
 ];
 
@@ -54,8 +60,10 @@ let lastQuestionIndex = questions.length - 1;
 let runningQuestionIndex = 0;
 
 function renderQuestion() {
+    console.log("maderenderfunction");
     let q = questions[runningQuestionIndex];
-    questions.innerHTML = "<p>" + q.question + "</p>";
+    console.log(q);
+    question.textContent = q.question;
     choiceA.innerHTML = q.choiceA;
     choiceB.innerHTML = q.choiceB;
     choiceC.innerHTML = q.choiceC;
@@ -63,7 +71,7 @@ function renderQuestion() {
     choiceE.innerHTML = q.choiceE;
 
 }
-if (runningQuestionIndex < lastQuestionIndex) {
-    runningQuestionIndex++;
-    renderQuestion();
-}
+// if (runningQuestionIndex < lastQuestionIndex) {
+//     runningQuestionIndex++;
+//     renderQuestion();
+// }

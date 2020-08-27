@@ -25,45 +25,10 @@
 
 /* Answer Styles */
 
-#possibleAnswers {
+#answers {
     margin-top: 20%;
     margin-bottom: 20%;
     text-align: center;
-    margin-left: 43%;
-    
-}
-#1 {
-    margin-top: 10%;
-    margin-bottom: 10%;
-    text-align: center;
-    margin-left: 40%;
-    
-}
-#2 {
-    margin-top: 10%;
-    margin-bottom: 10%;
-    text-align: center;
-    margin-left: 40%;
-    
-}
-#3 {
-    margin-top: 10%;
-    margin-bottom: 10%;
-    text-align: center;
-    margin-left: 40%;
-    
-}
-#4 {
-    margin-top: 10%;
-    margin-bottom: 10%;
-    text-align: center;
-    margin-left: 40%;
-    
-}
-#5 {
-    margin-top: 10%;
-    margin-bottom: 10%;
-    text-align: center;
-    margin-left: 40%;
+    margin-left: 42%;
     
 }
