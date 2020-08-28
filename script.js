@@ -4,13 +4,14 @@ let highscoreList = document.querySelector("#highscoreList");
 let timer = document.querySelector("#timer");
 let startButton = document.querySelector("#startButton");
 let saveButton = document.querySelector("#saveButton");
-let saveScore = document.querySelector("#saveScore");
+let saveScoreLabel = document.querySelector("#saveScoreLabel");
 let userInitials = document.querySelector("#userInitials");
 let imputForm = document.querySelector("#imputForm");
 let imputList = document.querySelector("#imputList");
-let secondsleft = 60;
+let secondsleft = 45;
 let score = 0;
 let interval;
+let userImput = [];
 
 // Timer and questions activated once start button clicked
 function beginquiz() {
@@ -34,7 +35,6 @@ function countdown() {
 
 
 // If answered inccorrectly, then sub 10 secs
-
 function checkAnswer(answer) {
     if (questions[runningQuestionIndex].correct == answer) {
         score++;
@@ -52,7 +52,8 @@ function checkAnswer(answer) {
 
 // When all questions answered or timer === 0, then stop game
 function endgame() {
-    if (secondsleft <= 0 || questions.length <= 0) {
+    let q = questions[runningQuestionIndex];
+    if (secondsleft <= 0 || questions.length <= 0 || q === undefined) {
         clearInterval(interval);
         document.getElementById("timer").innerHTML = "Times up!";
         document.getElementById("viewHighscores").style.display = "block";
@@ -60,36 +61,72 @@ function endgame() {
         document.getElementById("saveScore").innerHTML = "Save your score! Your score is: " + score;
         document.getElementById("h1").innerHTML = "Congratulations! Your score is: " + score;
         document.getElementById("h1").style.display = "block";
+        // document.getElementById("startButton").style.display = "block";
+        // document.getElementById("startButton").textContent = "Restart";
     }
 }
 
 
 startButton.addEventListener("click", beginquiz);
 viewHighscores.addEventListener("click", highscoreList);
+saveScoreLabel.addEventListener("click", renderImputs);
 
 
 // When stop game, then save initials and score for highscores
+
+
+// Render a new li for each imput
+retrieveItems();
+
 function renderImputs() {
 
-    for (var i = 0; i < questions.length; i++) {
-        var imput = questions[i];
+    imputList.textContent = userImput.length;
+
+    for (var i = 0; i < userImput.length; i++) {
+        var imput = userImput[i];
 
         var li = document.createElement("li");
         li.textContent = imput;
-        li.setAttribute("data-index", i);
         imputList.appendChild(li);
     }
 }
 
-saveButton.addEventListener("submit", function(event) {
+
+// Retrieve Items
+function retrieveItems() {
+
+    var storedItems = (JSON.parse(localStorage.getItem("score")),
+        JSON.parse(localStorage.getItem("userImput"))),
+
+    if (storedItems !== null) {
+        userImput = storedItems;
+    }
+
+    renderImputs();
+}
+
+
+// Store Items
+function storeItems() {
+
+    localStorage.setItem("score", JSON.stringify(score));
+    localStorage.setItem("userImput", JSON.stringify(userImput));
+}
+
+
+// When form is submitted
+imputForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    var inputValues = {
-        userInitials: userInitials.value.trim(),
-        score: score.value.trim(),
-    }
+    var inputValues = userInitials.value;
+    score.value;
+
     if (imputValues === "") {
         return;
     }
+    userImput.push(inputValues);
+    userInitials.value = "";
 
+    storeItems();
+    renderImputs();
 });

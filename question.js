@@ -64,6 +64,7 @@ let runningQuestionIndex = 0;
 function renderQuestion() {
 
     let q = questions[runningQuestionIndex];
+
     question.textContent = q.question;
     choiceA.innerHTML = q.choiceA;
     choiceB.innerHTML = q.choiceB;
