@@ -46,11 +46,11 @@ let questions = [
     },
     {
         question: "Which of these major awards was created first?",
-        choiceA: "CY Young Award",
-        choiceB: "Rookie of the Year Award",
-        choiceC: "Manager of the Year Award",
-        choiceD: "MVP Award",
-        choiceE: "Comeback Player of the Year Award",
+        choiceA: "CY Young",
+        choiceB: "Rookie of the Year",
+        choiceC: "Manager of the Year",
+        choiceD: "MVP",
+        choiceE: "Comeback POY",
         correct: "D",
     },
 ];
@@ -70,8 +70,5 @@ function renderQuestion() {
     choiceC.innerHTML = q.choiceC;
     choiceD.innerHTML = q.choiceD;
     choiceE.innerHTML = q.choiceE;
-
-    for (var i = 0; i < questions.length; i++) {
-        runningQuestionIndex[0] + 1;
-    }
 }
+

@@ -4,6 +4,7 @@ let highscoreList = document.querySelector("#highscoreList");
 let timer = document.querySelector("#timer");
 let startButton = document.querySelector("#startButton");
 let saveButton = document.querySelector("#saveButton");
+let saveScore = document.querySelector("#saveScore");
 let userInitials = document.querySelector("#userInitials");
 let imputForm = document.querySelector("#imputForm");
 let imputList = document.querySelector("#imputList");
@@ -37,12 +38,13 @@ function countdown() {
 function checkAnswer(answer) {
     if (questions[runningQuestionIndex].correct == answer) {
         score++;
+        runningQuestionIndex++ & renderQuestion();
         console.log("correct");
         console.log("Score", score);
     } else {
         secondsleft -= 10;
-        if (secondsleft <= 0); {
-            endgame()
+        if (secondsleft <= 0 || questions.length <= 0); {
+            endgame();
             console.log("wrong");
         }
     }
@@ -50,7 +52,7 @@ function checkAnswer(answer) {
 
 // When all questions answered or timer === 0, then stop game
 function endgame() {
-    if (secondsleft <= 0 || questions.length === 0) {
+    if (secondsleft <= 0 || questions.length <= 0) {
         clearInterval(interval);
         document.getElementById("timer").innerHTML = "Times up!";
         document.getElementById("viewHighscores").style.display = "block";
@@ -67,31 +69,27 @@ viewHighscores.addEventListener("click", highscoreList);
 
 
 // When stop game, then save initials and score for highscores
-// function renderImputs() {
+function renderImputs() {
 
-//     for (var i = 0; i < questions.length; i++) {
-//         var imput = questions[i];
+    for (var i = 0; i < questions.length; i++) {
+        var imput = questions[i];
 
-//         var li = document.createElement("li");
-//         li.textContent = imput;
-//         li.setAttribute("data-index", i);
-//         imputList.appendChild(li);
-//     }
-// }
+        var li = document.createElement("li");
+        li.textContent = imput;
+        li.setAttribute("data-index", i);
+        imputList.appendChild(li);
+    }
+}
 
-// saveButton.addEventListener("submit", function(event) {
-//     event.preventDefault();
+saveButton.addEventListener("submit", function(event) {
+    event.preventDefault();
 
-//     var inputValues = {
-//         userInitials: userInitials.value.trim(),
-//         score: score.value.trim(),
-//     }
-//     if (imputValues === "") {
-//         return;
-//     }
+    var inputValues = {
+        userInitials: userInitials.value.trim(),
+        score: score.value.trim(),
+    }
+    if (imputValues === "") {
+        return;
+    }
 
-var userInitials = [];
-localStorage.setItem("Score", JSON.stringify(score)); 
-localStorage.setItem("Initials", JSON.stringify(userInitials));
-var storedScores = JSON.parse(localStorage.getItem("Score"));
-var storedInitials = JSON.parse(localStorage.getItem("Initials")); 
+});
