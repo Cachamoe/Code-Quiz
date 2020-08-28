@@ -18,12 +18,13 @@
           View Highscores
         </button> </div>
       <div class="col-md-8"></div>
-      <div class="col-md-2" id="timer">Timer:</div>
+      <div class="col-md-2" id="timer">Timer: </div>
     </div>
     <h1 id="h1">Coding Quiz Challenge</h1>
     <p id="p">
-      <strong>Try the following code-related questions within the time limit. Keep in mind that incorrect answers will
-        penalize your score/time by ten seconds!</strong>
+      <strong>Try the following baseball related questions within the time limit. Keep in mind that incorrect answers
+        will
+        penalize your time by ten seconds!</strong>
     </p>
     <button type="button" class="btn btn-info" id="startButton">Start Quiz</button>
 
@@ -33,25 +34,14 @@
           <div class="modal-header">
             <h5 class="modal-title">
               Highscores:
-              <ol>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ol>
+              <ol id="imputList"></ol>
             </h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <form>
+            <form id="imputForm">
               <div class="form-group">
                 <label for="formGroupExampleInput">Save your score!</label>
                 <input type="text" class="form-control" id="formGroupExampleInput" id="userInitials"
@@ -87,8 +77,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
-  <script src="script.js"></script>
   <script src="question.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

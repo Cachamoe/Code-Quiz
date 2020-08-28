@@ -6,63 +6,64 @@ const choiceD = document.getElementById("4");
 const choiceE = document.getElementById("5");
 const question = document.getElementById("question");
 
+
 let questions = [
     {
-        question: "To be determined?",
-        choiceA: "To be determined",
-        choiceB: "To be determined",
-        choiceC: "To be determined",
-        choiceD: "To be determined",
-        choiceE: "To be determined",
+        question: "What pitching stat is abbreviated with a K?",
+        choiceA: "Win",
+        choiceB: "Strikeout",
+        choiceC: "Walk",
+        choiceD: "ERA",
+        choiceE: "Errors",
         correct: "B",
     },
     {
-        question: "To be determined?",
-        choiceA: "To be determined",
-        choiceB: "To be determined",
-        choiceC: "To be determined",
-        choiceD: "To be determined",
-        choiceE: "To be determined",
+        question: "Who was the first person to repeat as Cy Young winner?",
+        choiceA: "Sandy Koufax",
+        choiceB: "Greg Maddux",
+        choiceC: "Steve Carlton",
+        choiceD: "Roger Clemens",
+        choiceE: "Tom Seaver",
         correct: "A",
     },
     {
-        question: "To be determined?",
-        choiceA: "To be determined",
-        choiceB: "To be determined",
-        choiceC: "To be determined",
-        choiceD: "To be determined",
-        choiceE: "To be determined",
+        question: "Which player won the 2014 American League MVP Award?",
+        choiceA: "Miguel Cabrera",
+        choiceB: "Mookie Betts",
+        choiceC: "Jose Altuve",
+        choiceD: "Robinson Cano",
+        choiceE: "Mike Trout",
         correct: "E",
     },
     {
-        question: "To be determined?",
-        choiceA: "To be determined",
-        choiceB: "To be determined",
-        choiceC: "To be determined",
-        choiceD: "To be determined",
-        choiceE: "To be determined",
+        question: "When during a baseball game are fans encouraged to stretch?",
+        choiceA: "5th Inning",
+        choiceB: "6th Inning",
+        choiceC: "7th Inning",
+        choiceD: "8th Inning",
+        choiceE: "9th Inning",
         correct: "C",
     },
     {
-        question: "To be determined?",
-        choiceA: "To be determined",
-        choiceB: "To be determined",
-        choiceC: "To be determined",
-        choiceD: "To be determined",
-        choiceE: "To be determined",
+        question: "Which of these major awards was created first?",
+        choiceA: "CY Young Award",
+        choiceB: "Rookie of the Year Award",
+        choiceC: "Manager of the Year Award",
+        choiceD: "MVP Award",
+        choiceE: "Comeback Player of the Year Award",
         correct: "D",
     },
 ];
 
-// Once answered, new question appears
 
+// Once answered, new question appears
 let lastQuestionIndex = questions.length - 1;
 let runningQuestionIndex = 0;
 
+
 function renderQuestion() {
-    console.log("maderenderfunction");
+
     let q = questions[runningQuestionIndex];
-    console.log(q);
     question.textContent = q.question;
     choiceA.innerHTML = q.choiceA;
     choiceB.innerHTML = q.choiceB;
@@ -70,8 +71,7 @@ function renderQuestion() {
     choiceD.innerHTML = q.choiceD;
     choiceE.innerHTML = q.choiceE;
 
+    for (var i = 0; i < questions.length; i++) {
+        runningQuestionIndex[0] + 1;
+    }
 }
-// if (runningQuestionIndex < lastQuestionIndex) {
-//     runningQuestionIndex++;
-//     renderQuestion();
-// }
