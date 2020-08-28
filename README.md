@@ -1,4 +1,4 @@
-# Code-Quiz
+# Code Quiz
 ![](https://github.com/Cachamoe/Code-Quiz/blob/master/Screen%20Shot%202020-08-27%20at%208.41.03%20PM.png)
 ## Overview
  This is my code quiz! 
