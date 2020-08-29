@@ -25,9 +25,9 @@ THEN I can save my initials and score
 
 
 ## Website Features
-1)
-2)
-3)
+1) Baseball quiz with 5 questions and 45 seconds to complete it
+2) If you get an answer wrong, then 10 seconds are subtracted from the remaining time
+3) When the quiz is over, then you can save your initials and score
 
 ## Programs 
 HTML, CSS, Javascript
