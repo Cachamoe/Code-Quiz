@@ -131,7 +131,5 @@ saveButton.addEventListener("click", function (event) {
     userInput.push({ userName: inputValues, score });
     userInitials.value = "";
     console.log(userInput);
-    storeItems();
-    // renderInputs();
 });
 
