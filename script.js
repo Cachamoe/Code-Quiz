@@ -96,9 +96,6 @@ function renderInputs() {
 // B) Retrieve Items
 function retrieveItems() {
 
-    // var storedItems = JSON.parse(localStorage.getItem("score")),
-    //     JSON.parse(localStorage.getItem("userInput"));
-
     var storedItems = JSON.parse(localStorage.getItem("userInput"))
 
     if (storedItems !== null) {
