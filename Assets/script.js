@@ -44,6 +44,7 @@ function checkAnswer(answer) {
         console.log("Score", score);
     } else {
         secondsleft -= 10;
+        runningQuestionIndex++ & renderQuestion();
         if (secondsleft <= 0 || questions.length <= 0); {
             endgame();
             console.log("wrong");
