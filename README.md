@@ -30,7 +30,7 @@ THEN I can save my initials and score
 3) When the quiz is over, you can save your initials and score
 
 ## Programs 
-HTML, CSS, Javascript
+HTML, CSS, Javascript, jQuery, and Bootstrap
 
 ## Author/s
 Caleb Chaney
