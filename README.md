@@ -32,5 +32,8 @@ THEN I can save my initials and score
 ## Programs 
 HTML, CSS, Javascript, jQuery, and Bootstrap
 
+## License 
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+
 ## Author/s
 Caleb Chaney
