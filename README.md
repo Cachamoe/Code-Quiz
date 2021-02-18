@@ -29,7 +29,7 @@ THEN I can save my initials and score
 2) If you get an answer wrong, then 10 seconds are subtracted from the remaining time
 3) When the quiz is over, you can save your initials and score
 
-## Programs 
+## Technologies 
 HTML, CSS, Javascript, jQuery, and Bootstrap
 
 ## License 
